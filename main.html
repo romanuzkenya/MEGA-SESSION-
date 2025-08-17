@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --bg1: #090909;
+      --bg2: #1a1a2e;
+      --bg3: #282828;
+      --accent: #15ff00;
+      --accent2: #48ff00;
+      --accent3: #ff0077;
+      --accent4: #00e0ff;
+      --accent5: #fff200;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      color: #fff;
+      background: linear-gradient(120deg, var(--bg1), var(--bg2), var(--bg3));
+      background-size: 200% 200%;
+      animation: bgmove 18s ease-in-out infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    @keyframes bgmove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .top-info-bar {
+      width: 100vw;
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(16,16,32,0.85);
+      padding: 8px 18px 8px 12px;
+      box-shadow: 0 2px 16px 0 #000c;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      gap: 12px;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+    .info-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 1.05em;
+    }
+    .icon-emoji {
+      font-size: 1.5em;
+      margin-right: 7px;
+    }
+    .live-light {
+      font-weight: 900;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+      text-shadow: 0 0 13px #fff, 0 0 4px #f0f;
+      animation: colorcycle 2.3s linear infinite;
+      padding: 2px 10px;
+      border-radius: 8px;
+      background: rgba(30,30,40,0.65);
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 7px;
+      margin-left: 5px;
+      transition: color 0.6s;
+    }
+    @keyframes colorcycle {
+      0%   { color: #15ff00; text-shadow: 0 0 12px #15ff00;}
+      20%  { color: #00e0ff; text-shadow: 0 0 12px #00e0ff;}
+      40%  { color: #fff200; text-shadow: 0 0 12px #fff200;}
+      60%  { color: #ff0077; text-shadow: 0 0 12px #ff0077;}
+      80%  { color: #fff;    text-shadow: 0 0 12px #fff;}
+      100% { color: #15ff00; text-shadow: 0 0 12px #15ff00;}
+    }
+
+    /* Music player styles */
+    .music-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(24,24,36,0.82);
+      border-radius: 6px;
+      padding: 2px 8px 2px 6px;
+      margin-left: 0;
+      font-size: 1.0em;
+    }
+    .music-bar button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.25em;
+      margin: 0 3px;
+      transition: color 0.2s;
+    }
+    .music-bar button:hover {
+      color: var(--accent3);
+    }
+    .music-bar .fa-music {
+      color: var(--accent2);
+      font-size: 1.15em;
+      margin-right: 2px;
+    }
+
+    .button-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 70px;
+      gap: 9px;
+      width: 100vw;
+      max-width: 420px;
+      z-index: 1;
+      position: relative;
+      background: rgba(24,24,36,0.40);
+      padding: 30px 10px 40px 10px;
+      border-radius: 18px;
+      box-shadow: 0 6px 35px 0 #0008;
+      border: 2px solid #2225;
+    }
+
+    h3 {
+      margin-top: 0;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+      font-weight: 900;
+      font-size: 1.4em;
+      letter-spacing: 2px;
+      color: #fff200;
+      text-shadow: 0 0 8px #15ff00, 0 0 2px #000;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .button {
+      width: 170px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0px 15px;
+      background-color: red;
+      border-radius: 12px;
+      border: none;
+      color: white;
+      position: relative;
+      cursor: pointer;
+      font-weight: 900;
+      font-size: 1em;
+      transition: transform .13s, box-shadow .13s;
+      background: linear-gradient(0deg, #000, #272727 80%);
+      text-decoration: none;
+      margin-bottom: 2px;
+      box-shadow: 0 2px 18px 0 #0006;
+      overflow: hidden;
+    }
+    .button:active {
+      transform: scale(0.96);
+      box-shadow: none;
+    }
+    .button:before, .button:after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      border-radius: 12px;
+      background: linear-gradient(45deg, #48ff00, #15ff00, #000000,#000000, #ff0000, #00e0ff);
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      z-index: -1;
+      animation: steam 10s linear infinite;
+    }
+    @keyframes steam {
+      0% {background-position: 0 0;}
+      50% {background-position: 400% 0;}
+      100% {background-position: 0 0;}
+    }
+    .button:after { filter: blur(44px);}
+    .button span {
+      z-index: 1;
+      font-size: 1em;
+    }
+    .button .fa-brands, .button .fa, .button .fa-solid {
+      font-size: 1.15em;
+      margin-right: 4px;
+    }
+    .button.whatsapp { background: #25d366; }
+    .button.youtube  { background: #ff0000; }
+    .button.facebook { background: #1877f3; }
+    .button.whatsapp, .button.youtube, .button.facebook {
+      color: #fff;
+    }
+
+    .social-bar {
+      display: flex;
+      gap: 13px;
+      margin: 14px 0 10px 0;
+      justify-content: center;
+      align-items: center;
+    }
+    .social-bar a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5em;
+      transition: transform .13s, color .18s;
+    }
+    .social-bar a:hover { transform: scale(1.15); color: var(--accent4);}
+    .social-bar .fa-whatsapp { color: #25d366;}
+    .social-bar .fa-youtube { color: #ff0000;}
+    .social-bar .fa-facebook { color: #1877f3;}
+
+    .emojis {
+      font-size: 1.2em;
+      margin: 0 5px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100vw;
+      background-color: #222d;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 15px;
+      letter-spacing: 1px;
+      z-index: 100;
+      box-shadow: 0 -4px 20px 0 #0009;
+      backdrop-filter: blur(3px);
+    }
+    @media (max-width: 600px) {
+      .top-info-bar { font-size: 0.97em; padding: 6px 5px 6px 7px;}
+      .button-container {padding: 17px 2vw 20px 2vw;}
+      .button {font-size: 0.95em;}
+    }
+  </style>
+</head>
+<body>
+  <div class="top-info-bar">
+    <div class="info-block">
+      <span class="icon-emoji">⏰</span>
+      <span id="dateTime"></span>
+    </div>
+    <div class="info-block">
+      <span class="icon-emoji">🌐</span>
+      <span id="ipAddress">IP: ...</span>
+    </div>
+    <div class="info-block">
+      <span class="icon-emoji">🔋</span>
+      <span id="batteryLevel">--%</span>
+    </div>
+    <div class="info-block">
+      <span class="live-light" id="liveLightWord">LIVE</span>
+    </div>
+    <div class="music-bar">
+      <i class="fa fa-music"></i>
+      <span id="musicStatus">🎶</span>
+      <button id="musicToggle" title="Mute/Unmute"><i class="fa fa-volume-up"></i></button>
+      <audio id="bgMusic" autoplay loop>
+        <!-- You can change src to your preferred royalty-free music -->
+        <source src="https://files.catbox.moe/eenn4z.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <h3><span class="emojis">🤖✨</span>LADY-BELLA SESSION 2<span class="emojis">✨🤖</span></h3>
+    <div class="social-bar">
+      <a href="https://wa.me/254794146821" class="fa-brands fa-whatsapp" target="_blank" title="WhatsApp"></a>
+      <a href="https://www.youtube.com/" class="fa-brands fa-youtube" target="_blank" title="YouTube"></a>
+      <a href="https://facebook.com/" class="fa-brands fa-facebook" target="_blank" title="Facebook"></a>
+    </div>
+
+    <a href="/qr" class="button" target="_blank"><span> <i class="fa-solid fa-qrcode"></i> QR-CODE</span></a>
+    <a href="/pair" class="button" target="_blank"><span> <i class="fa-solid fa-link"></i> PAIRING-CODE</span></a>
+    <a href="https://github.com/SNOWBIRD0074/Lady-bella-v2/fork" class="button" target="_blank"><span> <i class="fa-brands fa-github"></i> FORK LADY-BELLA</span></a>
+    <a href="https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C" class="button whatsapp" target="_blank"><span><i class="fa-brands fa-whatsapp"></i> WhatsApp</span></a>
+    <p style="margin: 13px 0 4px 0;">WANT TO TALK TO DEVELOPER? <span class="emojis">👇</span></p>
+    <a href="https://wa.me/254794146821" class="button whatsapp" target="_blank"><span><i class="fa-brands fa-whatsapp"></i> ERROR</span></a>
+  </div>
+
+  <footer>
+    <span class="emojis">🌟</span> LADY-BELLA &copy; <span id="currentYear"></span> <span class="emojis">🤖</span>
+  </footer>
+
+  <script>
+    // Date & Time
+    function updateDateTime() {
+      const dt = new Date();
+      const options = {weekday:'short', year:'numeric', month:'short', day:'2-digit', hour:'2-digit', minute:'2-digit', second:'2-digit'};
+      document.getElementById('dateTime').textContent = dt.toLocaleString('en-GB', options);
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+
+    // IP Address fetch
+    fetch('https://api.ipify.org?format=json')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('ipAddress').textContent = 'IP: ' + data.ip;
+      })
+      .catch(() => {
+        document.getElementById('ipAddress').textContent = "IP: Unable";
+      });
+
+    // Battery API
+    if (navigator.getBattery) {
+      navigator.getBattery().then(function(battery) {
+        function updateBattery() {
+          const level = Math.round(battery.level * 100);
+          document.getElementById('batteryLevel').textContent = level + '%';
+        }
+        updateBattery();
+        battery.addEventListener('levelchange', updateBattery);
+      });
+    } else {
+      document.getElementById('batteryLevel').textContent = '--';
+    }
+
+    // LIVE words lightning effect
+    const liveWords = ['LIVE','ACTIVE','CONNECTED','ONLINE','READY','REAL-TIME','ON AIR','RUNNING','BOT-LIVE','SESSION'];
+    let liveIdx = 0;
+    function rotateLiveWord() {
+      liveIdx = (liveIdx + 1) % liveWords.length;
+      document.getElementById('liveLightWord').textContent = liveWords[liveIdx];
+    }
+    setInterval(rotateLiveWord, 1700);
+
+    // Music player
+    const music = document.getElementById('bgMusic');
+    const toggleBtn = document.getElementById('musicToggle');
+    const musicStatus = document.getElementById('musicStatus');
+    function updateMusicIcon() {
+      if (music.muted || music.paused) {
+        toggleBtn.innerHTML = '<i class="fa fa-volume-mute"></i>';
+        musicStatus.textContent = '🔇';
+      } else {
+        toggleBtn.innerHTML = '<i class="fa fa-volume-up"></i>';
+        musicStatus.textContent = '🎶';
+      }
+    }
+    toggleBtn.onclick = function() {
+      music.muted = !music.muted;
+      updateMusicIcon();
+    };
+    music.onplay = updateMusicIcon;
+    music.onpause = updateMusicIcon;
+    music.onvolumechange = updateMusicIcon;
+    // Try to autoplay on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      music.play().catch(()=>{});
+      updateMusicIcon();
+    });
+
+    // Current Year for footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+  </html>

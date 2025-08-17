@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LADY BELLA-V2 PAIR CODE</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --glass-bg: rgba(35,35,55,0.62);
+      --glass-blur: 10px;
+      --accent1: #15ff00;
+      --accent2: #00e0ff;
+      --accent3: #ff0077;
+      --accent4: #fff200;
+      --accent5: #fff;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      color: #fff;
+      /* Set new background image */
+      background: url("https://files.catbox.moe/j9eknp.jpg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    @keyframes bgmove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .music-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(24,24,36,0.82);
+      border-radius: 7px;
+      padding: 7px 17px 7px 11px;
+      margin-bottom: 20px;
+      font-size: 1.07em;
+      box-shadow: 0 2px 14px 0 #0003;
+      color: #fff;
+      width: fit-content;
+      position: relative;
+      z-index: 2;
+      transition: background 0.7s;
+      backdrop-filter: blur(7px);
+    }
+    .music-bar button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.2em;
+      margin: 0 2px;
+      transition: color 0.2s;
+    }
+    .music-bar button:hover {
+      color: #ff7f50;
+    }
+    .music-bar .fa-music {
+      color: #3fff5d;
+      font-size: 1.15em;
+      margin-right: 2px;
+    }
+    .music-bar span {
+      font-size: 1.02em;
+      font-weight: 600;
+    }
+    .music-bar #playFallback {
+      color: #fff200;
+      background: #151515;
+      border: 1px solid #fff20066;
+      border-radius: 7px;
+      padding: 2px 11px;
+      font-size: 1em;
+      margin-left: 15px;
+      cursor: pointer;
+      display: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .music-bar #playFallback:hover {
+      background: #fff200;
+      color: #1a1a1a;
+    }
+
+    .glass-box {
+      background: var(--glass-bg);
+      backdrop-filter: blur(var(--glass-blur));
+      box-shadow: 0 8px 45px 0 #0009;
+      border-radius: 22px;
+      padding: 32px 20px 35px 20px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 320px;
+      max-width: 95vw;
+      z-index: 1;
+      border: 1.6px solid #fff4;
+      position: relative;
+    }
+    .glow-title {
+      font-size: 1.45em;
+      font-weight: 900;
+      letter-spacing: 1.7px;
+      margin: -10px 0 18px 0;
+      text-align: center;
+      text-shadow: 0 0 15px var(--accent1), 0 0 5px #fff;
+      animation: colorcycle 2.5s linear infinite;
+      background: none;
+      border-radius: 9px;
+      padding: 4px 12px;
+      display: inline-block;
+    }
+    @keyframes colorcycle {
+      0%   { color: var(--accent1); text-shadow: 0 0 12px var(--accent1);}
+      25%  { color: var(--accent2); text-shadow: 0 0 12px var(--accent2);}
+      50%  { color: var(--accent3); text-shadow: 0 0 12px var(--accent3);}
+      75%  { color: var(--accent4); text-shadow: 0 0 12px var(--accent4);}
+      100% { color: var(--accent1); text-shadow: 0 0 12px var(--accent1);}
+    }
+
+    .box-content {
+      color: #fff;
+      font-size: 1.07em;
+      font-weight: 500;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .input-container {
+      display: flex;
+      background: #fff6;
+      border-radius: 1rem;
+      background: linear-gradient(45deg, #c5c5c588 0%, #ffffff6b 100%);
+      padding: 0.3rem;
+      gap: 0.3rem;
+      max-width: 300px;
+      width: 100%;
+      margin-bottom: 9px;
+      margin-top: 15px;
+      box-shadow: 0 2px 14px 0 #0003;
+    }
+    .input-container input {
+      border-radius: 0.8rem 0 0 0.8rem;
+      background: #e8e8e8dd;
+      width: 89%;
+      flex-basis: 75%;
+      padding: 1rem;
+      border: none;
+      border-left: 2px solid #ff9d9d;
+      color: #222;
+      font-size: 1.09em;
+      transition: border 0.2s;
+    }
+    .input-container input:focus {
+      border-left: 2px solid #15ff00;
+      outline: none;
+    }
+    .input-container button {
+      flex-basis: 25%;
+      padding: 1rem;
+      background: linear-gradient(135deg, #8a2be2 0%, #800080 100%);
+      font-weight: 900;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      color: white;
+      border: none;
+      width: 100%;
+      border-radius: 0 1rem 1rem 0;
+      font-size: 1em;
+      transition: background 0.2s, color 0.2s;
+    }
+    .input-container button:hover {
+      background: linear-gradient(135deg, #A8E4A0 0%, #32CD32 100%);
+      color: #ff0077;
+    }
+    .centered-text {
+      text-align: center;
+      color: #fff;
+      font-size: 1.06em;
+      font-weight: 600;
+      margin: 3px 0 2px 0;
+    }
+    .box-content h6 {
+      margin-top: 3px;
+      color: #fff;
+      font-size: 1.02em;
+      font-weight: 400;
+    }
+
+    /* Glowing Text */
+    .glowing-text {
+      margin-top: 19px;
+      font-size: 1.12rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF4500, 0 0 20px #FF4500, 0 0 25px #FF6347, 0 0 30px #FF6347;
+      animation: glow 2s infinite;
+      letter-spacing: 1.5px;
+    }
+    @keyframes glow {
+      0% {
+        text-shadow:
+          0 0 5px #FF0000,
+          0 0 10px #FF0000,
+          0 0 15px #FF4500,
+          0 0 20px #FF4500,
+          0 0 25px #FF6347,
+          0 0 30px #FF6347;
+      }
+      50% {
+        text-shadow:
+          0 0 5px #32CD32,
+          0 0 10px #32CD32,
+          0 0 15px #32CD32,
+          0 0 20px #7CFC00,
+          0 0 25px #ADFF2F,
+          0 0 30px #ADFF2F;
+      }
+      100% {
+        text-shadow:
+          0 0 5px #1E90FF,
+          0 0 10px #1E90FF,
+          0 0 15px #00BFFF,
+          0 0 20px #00BFFF,
+          0 0 25px #87CEFA,
+          0 0 30px #87CEFA;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .glass-box {
+        min-width: 99vw;
+        padding: 14vw 2vw 13vw 2vw;
+        border-radius: 17px;
+      }
+      .music-bar {margin-bottom: 12px;}
+      .glow-title {font-size: 1.08em;}
+      .input-container {padding: 0.13rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="music-bar">
+    <i class="fa fa-music"></i>
+    <span id="musicStatus">🎶</span>
+    <button id="musicToggle" title="Mute/Unmute"><i class="fa fa-volume-up"></i></button>
+    <audio id="bgMusic" autoplay loop>
+      <source src="https://files.catbox.moe/eenn4z.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button id="playFallback">▶️ Play Music</button>
+  </div>
+
+  <div class="glass-box">
+    <div class="glow-title"><span>🤖</span> LADY-BELLA V2 PAIR <span>✨</span></div>
+    <div class="box-content">
+      <i class="fa fa-user"></i>
+      <h6>⚙️ Enter your number with country code. ♻️</h6>
+      <div class="input-container">
+        <input placeholder="254099777544433" type="number" id="number" name="">
+        <button id="submit">ENTER</button>
+      </div>
+      <div class="centered-text" id="waiting-message" style="display: none;">in process...</div>
+      <main id="pair"></main>
+    </div>
+  </div>
+  <div class="glowing-text">Powered By cyberdev 🟢</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+  <script>
+    // Music player logic: autoplay and mute/unmute, fallback play button if blocked
+    const music = document.getElementById('bgMusic');
+    const toggleBtn = document.getElementById('musicToggle');
+    const musicStatus = document.getElementById('musicStatus');
+    const playFallback = document.getElementById('playFallback');
+    let triedAutoplay = false;
+
+    function updateMusicIcon() {
+      if (music.muted || music.paused) {
+        toggleBtn.innerHTML = '<i class="fa fa-volume-mute"></i>';
+        musicStatus.textContent = '🔇';
+      } else {
+        toggleBtn.innerHTML = '<i class="fa fa-volume-up"></i>';
+        musicStatus.textContent = '🎶';
+      }
+    }
+    toggleBtn.onclick = function() {
+      music.muted = !music.muted;
+      updateMusicIcon();
+    };
+
+    // Try autoplay
+    function tryPlayMusic() {
+      music.play()
+        .then(() => {
+          playFallback.style.display = 'none';
+          updateMusicIcon();
+        })
+        .catch(() => {
+          playFallback.style.display = '';
+        });
+      triedAutoplay = true;
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      tryPlayMusic();
+      updateMusicIcon();
+    });
+    playFallback.onclick = () => {
+      music.muted = false;
+      tryPlayMusic();
+    };
+    // If user clicks anywhere, try music
+    document.body.addEventListener('click', function() {
+      if (!triedAutoplay || music.paused) tryPlayMusic();
+    }, { once: true });
+
+    music.onplay = updateMusicIcon;
+    music.onpause = updateMusicIcon;
+    music.onvolumechange = updateMusicIcon;
+
+    // Pairing code logic (untouched)
+    let a = document.getElementById("pair");
+    let b = document.getElementById("submit");
+    let c = document.getElementById("number");
+
+    async function Copy() {
+      let text = document.getElementById("copy").innerText;
+      let obj = document.getElementById("copy");
+      await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
+      obj.innerText = "COPIED";
+      obj.style = "color:blue;font-weight:bold";
+      obj.size = "5";
+      setTimeout(() => {
+        obj.innerText = text;
+        obj.style = "color:black;font-weight-bold";
+        obj.size = "5";
+      }, 500);
+    }
+
+    b.addEventListener("click", async (e) => {
+      e.preventDefault();
+      if (!c.value) {
+        a.innerHTML = '<a style="color:black;font-weight:bold">❗Enter your whatsapp number with country code.</a><br><br>';
+      } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
+        a.innerHTML = '<a style="color:black;font-weight:bold">❌Invalid number format❌</a><br><br>';
+      } else {
+        const bc = c.value.replace(/[^0-9]/g, "");
+        let bb = "";
+        let bbc = "";
+        const cc = bc.split('');
+        cc.map(a => {
+          bbc += a;
+          if (bbc.length == 3) {
+            bb += " " + a;
+          } else if (bbc.length == 8) {
+            bb += " " + a;
+          } else {
+            bb += a;
+          }
+        });
+        c.type = "text";
+        c.value = "+" + bb;
+        c.style = "color:black;font-size:20px";
+        a.innerHTML = '<a style="color:black;font-weight:bold">Please wait🔎 </a><br><br>';
+        let { data } = await axios(`/code?number=${bc}`);
+        let code = data.code || "Service Unavailable";
+        a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:black;font-weight:bold">' + code + '</span></font><br><br><br>';
+      }
+    });
+  </script>
+</body>
+          </html>

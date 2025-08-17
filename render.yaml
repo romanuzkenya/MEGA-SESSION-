@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: kango-pair-site
+    env: docker
+    plan: free
+    branch: main
+    repo: https://github.com/SNOWBIRD0074/sessions-ladybella.onrender.com-
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
