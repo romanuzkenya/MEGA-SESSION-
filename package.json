@@ -1,16 +1,16 @@
 {
-  "description": "Pk",
+  "description": "Criminal",
   "main": "./index.js",
   "type": "commonjs",
   "engines" : { 
     "node" : ">=20.0.0"
     },
     "scripts": {
-      "start": "pm2 start index.js --deep-monitoring --attach --name Pk",
-      "stop": "pm2 stop Pk",
-     "restart": "pm2 restart Pk"
+      "start": "pm2 start index.js --deep-monitoring --attach --name Criminal",
+      "stop": "pm2 stop Criminal",
+     "restart": "pm2 restart Criminal"
     },
-  "author": "pk driller",
+  "author": "®Charleske",
   "license": "GPL-3.0 license",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.9",
