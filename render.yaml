@@ -4,6 +4,6 @@ services:
     env: docker
     plan: free
     branch: main
-    repo: https://github.com/SNOWBIRD0074/sessions-ladybella.onrender.com-
+    repo: https://github.com/romanuzkenya/MEGA-SESSION.onrender.com-
     dockerfilePath: ./Dockerfile
     autoDeploy: true
