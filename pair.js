@@ -75,21 +75,21 @@ var randomItem = selectRandomItem(items);
                         const { upload } = require('./mega');
                         const mega_url = await upload(fs.createReadStream(rf), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let md = "ke~" + string_session;
+                        let md = "cyber~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hello there Criminal xmd User! 👋🏻* 
+                        let desc = `*Hello there lady bella User! 👋🏻* 
 
 > Do not share your session id with your gf 😂.
 
- *Thanks for using CRIMINAL XMD🇰🇪* 
+ *Thanks for using LADY BELLA 🇰🇪* 
 
 > Join WhatsApp Channel :- ⤵️
  
-.https://github.com/CHARLESX001/CRIMINAL-XMD
+.https://github.com/SNOWBIRD0074/Lady-bella-v2
 
 Dont forget to fork the repo ⬇️
 
-https://github.com/CHARLESX001/CRIMINAL-XMD
+https://github.com/SNOWBIRD0074/Lady-bella-v2
 
 > *© Powered BY cyberdev 💙*`; 
                         await sock.sendMessage(sock.user.id, {
@@ -98,7 +98,7 @@ contextInfo: {
 externalAdReply: {
 title: "cyberdev",
 thumbnailUrl: "https://i.postimg.cc/dVHyzJ1V/ab9c8403-2e4e-439b-9da8-3ebb069aa729.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K",
+sourceUrl: "https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C",
 mediaType: 1,
 renderLargerThumbnail: true
 }  
@@ -112,9 +112,9 @@ renderLargerThumbnail: true
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "CRIMINAL XMD",
+title: "LADY BELLA V2",
 thumbnailUrl: "https://i.postimg.cc/dVHyzJ1V/ab9c8403-2e4e-439b-9da8-3ebb069aa729.jpg",
-sourceUrl: ".https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K",
+sourceUrl: ".https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true

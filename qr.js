@@ -73,33 +73,33 @@ var randomItem = selectRandomItem(items);
                         let md = "cyber~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
                         let desc = `*╭━━━━━━━━━━━━━━━━━━━━━╮
-┃   CRIMINAL XMD USER   ┃
+┃   LADY BELLA USER   ┃
 ╰━━━━━━━━━━━━━━━━━━━━━╯
 
-🙋 Hello there, CRIMINAL-XMD User!  
+🙋 Hello there, NEXUS-XMD User!  
 
 > ⚠️ *Do not share your session ID with your GF!* 😂  
 
-✅ **Thanks for using CRIMINAL XMD!** 🚩  
+✅ **Thanks for using LADY BELLA V2!** 🚩  
 
 ━━━━━━━━━━━━━━━━━━━━━━━  
 
 📢 **Join our WhatsApp Channel:**  
-🔗  https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K
+🔗  .https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C
 
 ⭐ **Don't forget to fork the repo:**  
-🔗 .https://github.com/CHARLESX001/CRIMINAL-XMD
+🔗 .https://github.com/SNOWBIRD0074/Lady-bella-v2 
 
 ━━━━━━━━━━━━━━━━━━━━━━━  
 
-> *© Powered by Charles 💟*`;
+> *© Powered by snowbird 💟*`;
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
 title: " 𝖇𝖔𝖙 𝖈𝖔𝖓𝖓𝖊𝖈𝖙𝖊𝖉",
 thumbnailUrl: "https://i.postimg.cc/dVHyzJ1V/ab9c8403-2e4e-439b-9da8-3ebb069aa729.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K",
+sourceUrl: "https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C",
 mediaType: 1,
 renderLargerThumbnail: true
 }  
@@ -109,33 +109,33 @@ renderLargerThumbnail: true
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
                             let desc = `*╭━━━━━━━━━━━━━━━━━━━━━╮
-┃  CRIMINAL XMD USER   ┃
+┃  LADY BELLA USER   ┃
 ╰━━━━━━━━━━━━━━━━━━━━━╯
 
-🙋 Hello there CRIMINAL XMD User!  
+🙋 Hello there LADY BELLA User!  
 
 > ⚠️ *Do not share your session ID with your GF!* 😂  
 
-✅ **Thanks for using CRIMINAL XMD** 🚩  
+✅ **Thanks for using LADY BELLA V2!** 🚩  
 
 ━━━━━━━━━━━━━━━━━━━━━━━  
 
 📢 **Join our WhatsApp Channel:**  
-🔗 .  https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K
+🔗 .  https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C
 
 ⭐ **Don't forget to fork the repo:**  
-🔗  https://github.com/CHARLESX001
+🔗  https://github.com/SNOWBIRD0074/Lady-bella-v2 
 
 ━━━━━━━━━━━━━━━━━━━━━━━  
 
-> *© Powered by Charles 💟*`;
+> *© Powered by cyberdev 💟*`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
 title: " 𝖒𝖉 𝖈𝖔𝖓𝖓𝖊𝖈𝖙𝖊𝖉 ✅  ",
 thumbnailUrl: "https://i.postimg.cc/dVHyzJ1V/ab9c8403-2e4e-439b-9da8-3ebb069aa729.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K",
+sourceUrl: "https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true
