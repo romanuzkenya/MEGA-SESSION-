@@ -77,7 +77,7 @@ var randomItem = selectRandomItem(items);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
                         let md = "ke~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hello there lady CRIMINAL XMD User! 👋🏻* 
+                        let desc = `*Hello there CRIMINAL XMD User! 👋🏻* 
 
 > Do not share your session id with your gf 😂.
 
@@ -97,7 +97,7 @@ text: desc,
 contextInfo: {
 externalAdReply: {
 title: "Criminal",
-thumbnailUrl: "https://i.postimg.cc/dVHyzJ1V/ab9c8403-2e4e-439b-9da8-3ebb069aa729.jpg",
+thumbnailUrl: "https://files.catbox.moe/o4of0n.jpg",
 sourceUrl: "https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K",
 mediaType: 1,
 renderLargerThumbnail: true
@@ -107,13 +107,13 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `*Don't Share with anyone this code use for deploy LADY BELLA-V2*\n\n ◦ *Github:* https://github.com/SNOWBIRD0074/Lady-bella-v2`;
+                            let desc = `*Don't Share with anyone this code use for deploy CRIMINAL XMD*\n\n ◦ *Github:* https://github.com/CHARLESX001/CRIMINAL-XMD`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
 title: "CRIMINAL XMD",
-thumbnailUrl: "https://i.postimg.cc/dVHyzJ1V/ab9c8403-2e4e-439b-9da8-3ebb069aa729.jpg",
+thumbnailUrl: "https://files.catbox.moe/o4of0n.jpg",
 sourceUrl: ".https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K",
 mediaType: 2,
 renderLargerThumbnail: true,
