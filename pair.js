@@ -77,9 +77,9 @@ var randomItem = selectRandomItem(items);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
                         let md = "ke~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hello there CRIMINAL XMD User! 👋🏻* 
+                        let desc = `*Hello there CRIMINAL XMD User! 💥* 
 
-> Do not share your session id with your gf 😂.
+> Do not share your session id with your gf 🥍.
 
  *Thanks for using CRIMINAL XMD🇰🇪* 
 
