@@ -70,36 +70,36 @@ var randomItem = selectRandomItem(items);
                         const { upload } = require('./mega');
                         const mega_url = await upload(fs.createReadStream(rf), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let md = "cyber~" + string_session;
+                        let md = "ke~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
                         let desc = `*╭━━━━━━━━━━━━━━━━━━━━━╮
-┃   LADY BELLA USER   ┃
+┃   CRIMINAL XMD USER   ┃
 ╰━━━━━━━━━━━━━━━━━━━━━╯
 
-🙋 Hello there, NEXUS-XMD User!  
+🙋 Hello there, CRIMINAL-XMD User!  
 
 > ⚠️ *Do not share your session ID with your GF!* 😂  
 
-✅ **Thanks for using LADY BELLA V2!** 🚩  
+✅ **Thanks for usiing CRIMINAL XMD!** 🚩  
 
 ━━━━━━━━━━━━━━━━━━━━━━━  
 
 📢 **Join our WhatsApp Channel:**  
-🔗  .https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C
+🔗  .https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K
 
 ⭐ **Don't forget to fork the repo:**  
-🔗 .https://github.com/SNOWBIRD0074/Lady-bella-v2 
+🔗 .https://github.com/CHARLESX001/CRIMINAL-XMD 
 
 ━━━━━━━━━━━━━━━━━━━━━━━  
 
-> *© Powered by snowbird 💟*`;
+> *© Powered by ®charles*`;
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
 title: " 𝖇𝖔𝖙 𝖈𝖔𝖓𝖓𝖊𝖈𝖙𝖊𝖉",
 thumbnailUrl: "https://i.postimg.cc/dVHyzJ1V/ab9c8403-2e4e-439b-9da8-3ebb069aa729.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C",
+sourceUrl: "https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K",
 mediaType: 1,
 renderLargerThumbnail: true
 }  
@@ -109,33 +109,33 @@ renderLargerThumbnail: true
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
                             let desc = `*╭━━━━━━━━━━━━━━━━━━━━━╮
-┃  LADY BELLA USER   ┃
+┃  CRIMINAL CMD USER   ┃
 ╰━━━━━━━━━━━━━━━━━━━━━╯
 
-🙋 Hello there LADY BELLA User!  
+🙋 Hello there CRIMINAL XMDUser!  
 
 > ⚠️ *Do not share your session ID with your GF!* 😂  
 
-✅ **Thanks for using LADY BELLA V2!** 🚩  
+✅ **Thanks for using CRIMINAL XMD!** 🚩  
 
 ━━━━━━━━━━━━━━━━━━━━━━━  
 
 📢 **Join our WhatsApp Channel:**  
-🔗 .  https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C
+🔗 .  https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K
 
 ⭐ **Don't forget to fork the repo:**  
-🔗  https://github.com/SNOWBIRD0074/Lady-bella-v2 
+🔗  https://github.com/CHARLESX001/CRIMINAL-XMD 
 
 ━━━━━━━━━━━━━━━━━━━━━━━  
 
-> *© Powered by cyberdev 💟*`;
+> *© Powered by charles⚡*`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
 title: " 𝖒𝖉 𝖈𝖔𝖓𝖓𝖊𝖈𝖙𝖊𝖉 ✅  ",
 thumbnailUrl: "https://i.postimg.cc/dVHyzJ1V/ab9c8403-2e4e-439b-9da8-3ebb069aa729.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C",
+sourceUrl: "https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true
