@@ -85,7 +85,7 @@ var randomItem = selectRandomItem(items);
 
 > Join WhatsApp Channel :- ⤵️
  
-.https://github.com/CHARLESX001/CRIMINAL -XMD
+.https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K
 
 Dont forget to fork the repo ⬇️
 
