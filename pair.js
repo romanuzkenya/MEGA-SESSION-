@@ -75,7 +75,7 @@ var randomItem = selectRandomItem(items);
                         const { upload } = require('./mega');
                         const mega_url = await upload(fs.createReadStream(rf), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let md = "cyber~" + string_session;
+                        let md = "ke~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
                         let desc = `*Hello there lady CRIMINAL XMD User! 👋🏻* 
 
@@ -96,7 +96,7 @@ https://github.com/CHARLESX001/CRIMINAL-XMD
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "cyberdev",
+title: "Criminal",
 thumbnailUrl: "https://i.postimg.cc/dVHyzJ1V/ab9c8403-2e4e-439b-9da8-3ebb069aa729.jpg",
 sourceUrl: "https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K",
 mediaType: 1,
@@ -112,9 +112,9 @@ renderLargerThumbnail: true
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "LADY BELLA V2",
+title: "CRIMINAL XMD",
 thumbnailUrl: "https://i.postimg.cc/dVHyzJ1V/ab9c8403-2e4e-439b-9da8-3ebb069aa729.jpg",
-sourceUrl: ".https://whatsapp.com/channel/0029Vb5nSebFy722d2NEeU3C",
+sourceUrl: ".https://whatsapp.com/channel/0029Vao2hgeChq6HJ5bmlZ3K",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true
